@@ -9,7 +9,7 @@ if bandage is None:
 
 cap = cv2.VideoCapture(0)
 
-# ✅ Define smoothing variables OUTSIDE loop
+# It's define smoothing variables OUTSIDE loop
 prev_cx = 0
 prev_cy = 0
 
@@ -71,11 +71,11 @@ while True:
             cx = x + w // 2
             cy = y + h // 2
 
-            # ✅ First frame fix
+            # To fix First frame
             if prev_cx == 0 and prev_cy == 0:
                 prev_cx, prev_cy = cx, cy
 
-            # ✅ Smoothing
+            # It's for  Smoothing
             cx = int(0.7 * prev_cx + 0.3 * cx)
             cy = int(0.7 * prev_cy + 0.3 * cy)
 
